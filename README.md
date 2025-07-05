@@ -1,4 +1,4 @@
-CodeAlpha_ProjectName
+CodeAlpha_Basic-Network-Sniffer
 This repository contains Python programs designed for basic network traffic analysis and interaction using the powerful Scapy library. These tools help in understanding network protocols, data flow, and packet structures.
 
 🚀 Features
@@ -35,13 +35,16 @@ pip install scapy
 
 Verify installation by opening Python interpreter (python in CMD) and typing from scapy.all import *. You should see the Scapy banner.
 
+Screenshot: Scapy Installation Verification
+(Replace scapy_install_verify.png with your actual screenshot file name if you have one)
+
 📦 Installation & Setup
 Clone the Repository (or Download):
 
-git clone https://github.com/YourUsername/CodeAlpha_ProjectName.git
-cd CodeAlpha_ProjectName
+git clone https://github.com/Balemseshukumar/CodeAlpha_Basic-Network-Sniffer.git
+cd CodeAlpha_Basic-Network-Sniffer
 
-(Replace YourUsername with your actual GitHub username)
+(This command now uses your specific GitHub username)
 
 Ensure Dependencies are Met: Follow the "Prerequisites" section above to install Python, Npcap, and Scapy.
 
@@ -60,6 +63,9 @@ Start Python: python
 In the Python interpreter, type: from scapy.all import * then conf.ifaces
 
 Note the exact Name of your primary network adapter (e.g., "Realtek RTL8821CE 802.11ac PCIe Adapter").
+
+Screenshot: conf.ifaces Output
+(Replace conf_ifaces_output.png with your actual screenshot file name if you have one)
 
 Update the Script:
 
@@ -81,6 +87,9 @@ python network_sniffer.py
 
 By default, it captures 10 packets. You can change count=10 to count=0 in the start_sniffer function call within the script to sniff indefinitely (press Ctrl+C to stop).
 
+Screenshot: network_sniffer.py Output
+(Replace sniffer_output.png with your actual screenshot file name if you have one)
+
 2. scapy_ping.py (Ping Example)
 This script crafts and sends an ICMP ping packet.
 
@@ -96,7 +105,10 @@ python scapy_ping.py
 
 By default, it pings 8.8.8.8. You can modify the target_ip variable in the send_and_receive_ping function call within the script to ping a different IP address or hostname.
 
-📊 Understanding the Output
+Screenshot: scapy_ping.py Output
+(Replace ping_output.png with your actual screenshot file name if you have one)
+
+📊 Understanding the Output (Packet Execution)
 network_sniffer.py: You will see detailed information for each captured packet, including MAC addresses (Ethernet layer), IP addresses (IPv4/IPv6 layer), port numbers (TCP/UDP layer), and attempts to display raw data payloads. This helps you visualize the structure of data as it travels across your network.
 
 scapy_ping.py: You will see a summary of the crafted ICMP request and, if successful, a summary of the ICMP echo reply from the target. This demonstrates a basic request-response cycle of a network protocol.
